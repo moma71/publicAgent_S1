@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 1) header 삽입
-  fetch("/idol/episodes-common/header.html?v=" + Date.now())
+  fetch("/publicAgent_S1/episodes-common/header.html?v=" + Date.now())
     .then((response) => response.text())
     .then((data) => {
       document.body.insertAdjacentHTML("afterbegin", data);
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentNum = parseInt(episodeMatch[1]);
 
       const prevEp =
-        currentNum > 1 ? `/idol/episode${currentNum - 1}/` : "#";
-      const nextEp = `/idol/episode${currentNum + 1}/`;
+        currentNum > 1 ? `/publicAgent_S1/episode${currentNum - 1}/` : "#";
+      const nextEp = `/publicAgent_S1/episode${currentNum + 1}/`;
 
       prevLinks.forEach((a) => (a.href = prevEp));
       nextLinks.forEach((a) => (a.href = nextEp));
