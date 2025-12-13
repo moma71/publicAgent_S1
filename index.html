@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="구산구 AI 혁명기 - 리얼리즘 오피스 성장 드라마">
+  <meta property="og:description" content="좌천된 엘리트 공무원 강민준과 낙후된 구산구청의 AI 혁명기.">
+  <title>구산구 AI 혁명기 — Episodes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="common-header"></div>
+  <script src="episodes-common/load-header.js"></script>
+
+  <main class="container">
+    <section class="hero">
+      <div class="video-bg">
+        <!-- Assuming generic video background or reusing existing asset as placeholder -->
+        <video autoplay muted loop playsinline>
+          <source src="episode1/06.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1>구산구 AI 혁명기</h1>
+        <p>좌천된 엘리트, 데이터로 세상을 바꾸다</p>
+        <a class="btn-primary" href="#episodes">정주행 시작하기</a>
+      </div>
+    </section>
+
+    <section id="episodes">
+      <h2 class="section-title">📚 에피소드 목록 (총 10부작)</h2>
+
+      <div class="episode-grid">
+        <!-- Ep 1-10 : Active -->
+        <a class="ep-btn" href="episode1/index.html" style="background-image: url('episode1/01.png')">Episode 1<br><span
+            style="font-size:0.8em">추락</span></a>
+        <a class="ep-btn" href="episode2/index.html" style="background-image: url('episode2/01.png')">Episode 2<br><span
+            style="font-size:0.8em">현실의 벽</span></a>
+        <a class="ep-btn" href="episode3/index.html" style="background-image: url('episode3/01.jpeg')">Episode
+          3<br><span style="font-size:0.8em">첫 승리</span></a>
+        <a class="ep-btn" href="episode4/index.html" style="background-image: url('episode4/01.jpeg')">Episode
+          4<br><span style="font-size:0.8em">데이터 전쟁</span></a>
+        <a class="ep-btn" href="episode5/index.html" style="background-image: url('episode5/01.jpeg')">Episode
+          5<br><span style="font-size:0.8em">조직의 변화</span></a>
+        <a class="ep-btn" href="episode6/index.html" style="background-image: url('episode6/01.jpeg')">Episode
+          6<br><span style="font-size:0.8em">첫 성과 발표</span></a>
+        <a class="ep-btn" href="episode7/index.html" style="background-image: url('episode7/01.jpeg')">Episode
+          7<br><span style="font-size:0.8em">역공</span></a>
+        <a class="ep-btn" href="episode8/index.html" style="background-image: url('episode8/01.png')">Episode 8<br><span
+            style="font-size:0.8em">반전의 단서</span></a>
+        <a class="ep-btn" href="episode9/index.html" style="background-image: url('episode9/01.jpeg')">Episode
+          9<br><span style="font-size:0.8em">최종 대결</span></a>
+        <a class="ep-btn" href="episode10/index.html" style="background-image: url('episode10/01.png')">Episode
+          10<br><span style="font-size:0.8em">새로운 시작</span></a>
+
+        <!-- Future Episodes Placeholder if needed, or remove since source says 10 eps -->
+        <!-- Kept commented out or removed for clarity as user explicitly analyzed files saying 10 eps -->
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    © Gu-san District AI Revolution Project
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Simple random video background logic if multiple assets exist
+      const videos = [
+        'episode1/06.mp4' // Using known asset
+      ];
+
+      const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+      const videoElement = document.querySelector('.video-bg video');
+      if (videoElement) {
+        const sourceElement = videoElement.querySelector('source');
+        if (sourceElement) {
+          // sourceElement.src = randomVideo; // Uncomment if multiple
+          videoElement.load();
+          videoElement.play().catch(e => console.log("Auto-play prevented:", e));
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
